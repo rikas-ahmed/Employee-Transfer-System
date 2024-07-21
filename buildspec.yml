@@ -11,15 +11,15 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t my-react-app .
-      - docker tag my-react-app:latest 123456789012.dkr.ecr.us-west-2.amazonaws.com/my-react-app:latest
+      - docker build -t my-node-app .
+      - docker tag my-node-app:latest 123456789012.dkr.ecr.us-west-2.amazonaws.com/my-node-app:latest
   build:
     commands:
       - echo Build completed on `date`
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push 123456789012.dkr.ecr.us-west-2.amazonaws.com/my-react-app:latest
+      - docker push 123456789012.dkr.ecr.us-west-2.amazonaws.com/my-node-app:latest
 artifacts:
   files:
     - '**/*'
