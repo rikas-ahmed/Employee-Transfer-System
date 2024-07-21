@@ -1,9 +1,9 @@
-// src/routes/rejectTransferRoutes.js
-
 const express = require('express');
 const router = express.Router();
-const transferController = require('../controllers/rejectTransferController');
+const rejectTransferController = require('../controllers/rejectTransferController');
 
-router.put('/reject/:id', transferController.rejectTransfer);
+router.get('/', rejectTransferController.getAllEmployees);
+router.get('/:empNo', rejectTransferController.getEmployeeById);
+router.post('/update/:empNo', rejectTransferController.rejectTransferRequest);
 
 module.exports = router;
