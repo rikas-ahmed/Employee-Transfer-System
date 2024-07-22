@@ -20,7 +20,7 @@ const Branch = sequelize.define('Branch', {
     allowNull: false
   }
 }, {
-  tableName: 'branch',
+  tableName: 'Branch',
   timestamps: false
 });
 
